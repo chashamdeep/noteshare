@@ -1,10 +1,10 @@
 html,body{
   height:100%;
   width: 100%;
-  overflow-x: hidden;
   padding:0px;
   margin: 0px;
 }
+
 
 
 .navbar-collapse.collapse {
@@ -27,18 +27,68 @@ float: right!important;
 
 @media screen and (max-width: 300px) {
   .searchForm {
-  clear:both;
-}
+        clear:both;
+    }
 }
 
 .navbar {
   margin-bottom:0;
   border-radius:0;
+  background:rgb(27, 134, 167);
+    border:0;
 }
+
+ul.nav.navbar-nav li > a.navbar-brand {
+    color:white;
+}
+
+#backImage {
+    background:url('../images/banner.jpg');
+    background:linear-gradient(0deg, rgba(10,10,10,.5) 30%,rgba(10,10,10,.5) 70%) ,url('../images/banner.jpg');
+    max-width:100%;
+    height:320px;
+    background-size:100% 135%;
+    background-position:center;
+    position:relative;
+}
+
+#backImage h1 {
+    position: absolute;
+    margin:0;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+    font-size:55px;
+    /*text-shadow:1px 1px 0px rgba(10, 10, 10, .7),1px 3px 0px rgba(10,10, 10, .7), 1px 5px 0px rgba(10, 10, 10, .7);*/
+    color:rgba(255,255,255,1);
+}
+
 .nav-tabs
 {
   display:flex;
+    border:0px;
 }
+
+.row.tabss {
+    padding:0px 15px;
+    background:rgb(27, 134, 167);
+}
+
+.row.tabss a {
+    color:white;
+}
+
+.row.tabss a:hover {
+    color:grey;
+    border-radius: 0px;
+}
+
+.row.tabss a.active:hover {
+    border-radius:inherit
+
+}
+
 .container
 {
   width: 100%
@@ -48,24 +98,214 @@ float: right!important;
   width:100%;
   height:320px;
 }
+
+.NotesContainer {
+    box-shadow:0px 0px 5px 0px rgba(10,10,10,.09);
+    margin:30px auto;
+    height:500px;
+    width:300px;
+    border:1px solid rgba(50,50,50,.2);
+    background:rgba(90,90,90,.09);
+    overflow: hidden;
+}
+
 .noteImg
 {
-  height:265px;
-  width:200px;
-  margin-left: 55px;
+  height:320px;
+  width:300px;
+  border-bottom: 0;
+    background:white;
 }
+
+.noteImg img {
+    height: 100%;
+    width:100%;
+}
+
+
 .noteContent
 {
-  height:140px;
-  width:200px;
-  margin-left: 55px;
+  height:150px;
+  width:100%;
+  border-top:1px solid rgba(70,70,70,.3);
+  text-align: center;
+  padding:0px 15px;
 }
+
+.noteContent p {
+    margin:0;
+}
+
+.icons {
+    border-top:1px solid rgba(70,70,70,.3);
+    margin-top:20px;
+    padding:5px;
+}
+
 .span
 {
   font-weight: 700;
-  margin-left: 18px;
+  margin-left:20px;
 }
+
+.span:first-child {
+    margin-left:0px;
+}
+
 .docType
 {
-  padding-bottom: 20px;
+  padding:0px 20px;
+  position:relative;
+    margin-top:30px;
+}
+
+.docType h2  {
+    position:relative;
+}
+
+.docType h2 span {
+    background: white;
+    z-index: 1;
+    position: relative;
+    padding:0px 15px;
+    margin-left:40px;
+}
+
+.docType h2:before {
+    position:absolute;
+    content:"";
+    display:block;
+    width:100%;
+    top:50%;
+    height:1px;
+    background:rgba(100,100,100,.4);
+}
+
+
+.docType a {
+    position: absolute;
+     content:"";
+    display: inline-block;
+    top:50%;
+    right:20px;
+    transform: translate(0,-25%);
+    background:white;
+    padding:0px 10px;
+}
+
+
+.PaperContainerTitle {
+    min-height:40px;
+    height:auto;
+    margin-bottom:30px;
+}
+
+.PaperContainerTitle .col-md-6 {
+    padding:0px;
+}
+
+.tab-content {
+    padding-top:40px;
+}
+
+.row.equalHeight {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+.row.equalHeight > [class*='col-'] {
+
+	 flex-direction: column;
+}
+
+.MoreOption {
+    position:relative;
+    top:50%;
+    transform:translate(0%,-50%);
+    text-align: right;
+}
+
+#myModal1 {
+    text-align: center;
+}
+
+#myModal1.modal::before {
+     content: "";
+     display: inline-block;
+     height: 70%;
+     margin-right: -4px;
+     vertical-align: middle;
+}
+
+#myModal1 .modal-dialog {
+     display: inline-block;
+     text-align: left;
+     vertical-align: middle;
+}
+
+/**** Footer Styles ****/
+
+.mainFooter {
+    background:rgb(27, 134, 167);
+    color:white;
+    text-align: center;
+    padding:8px 0px;
+    font-size:13px;
+    font-style:italic;
+}
+
+.mainFooter p {
+    margin:0;
+}
+
+/**** Modal For Share Style *****/
+
+.icons  p .glyphicon:hover {
+    cursor: pointer;
+}
+
+
+/*****  Fragment Identifier Tabs *****/
+
+.row.menuSelectCtn {
+    padding:0px 50px;
+}
+
+.row.menuSelectCtn ul li {
+    margin-right:20px;
+}
+
+.row.menuSelectCtn ul li:last-child {
+    margin-right: 0;
+}
+
+.row.menuSelectCtn ul li a {
+    padding:10px;
+    background:rgba(180,180,180,.3);
+    color:rgba(27,134,167,.8);
+    border-radius:4px;
+}
+
+.row.menuSelectCtn ul li a:hover {
+    color:rgba(27,134,167,1);
+    background:rgba(180,180,180,.4);
+}
+
+
+#SearchBtn {
+    background:rgb(15, 165, 210);
+    color:white;
+    box-shadow:0px 0px 1px rgba(15,25,120,.2);
+    border:1px solid rgb(15, 165, 210);
+}
+
+
+#MoreSee3:hover, #MoreSee2:hover, #MoreSee1:hover {
+    cursor: pointer;
+}
+
+
+#QuestionContainer .col-md-4, #StudyMaterials .col-md-4, #ProjectReports .col-md-4 {
+    display:none;
 }
